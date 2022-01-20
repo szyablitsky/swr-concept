@@ -1,0 +1,4 @@
+{
+  "name": "EmployeeSettings",
+  "main": "./EmployeeSettings.tsx"
+}

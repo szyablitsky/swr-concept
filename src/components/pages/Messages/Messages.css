@@ -1,0 +1,23 @@
+.messages-page {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.messages-page__list {
+  width: 30%;
+  padding-right: 40px;
+}
+
+.messages-page__list-item {
+  padding: 14px 20px;
+  margin-bottom: 14px;
+  width: 100%;
+  display: block;
+  text-align: left;
+}
+
+.messages-page__chat {
+  width: 70%;
+  margin-top: -20px;
+}
+

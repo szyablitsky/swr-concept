@@ -1,0 +1,15 @@
+.settings-nav-menu {
+  margin: 10px 0 40px;
+}
+
+.settings-nav-menu__item {
+  display: inline-block;
+  margin-right: 30px;
+  text-decoration: none;
+  opacity: 0.5;
+  font-weight: bold;
+}
+
+.settings-nav-menu__item_active {
+  opacity: 1;
+}

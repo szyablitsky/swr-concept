@@ -1,0 +1,4 @@
+{
+  "name": "ClientSettings",
+  "main": "./ClientSettings.tsx"
+}
