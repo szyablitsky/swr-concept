@@ -1,0 +1,36 @@
+
+.message-list {
+  background-color: #eee;
+  border-radius: 4px;
+  padding: 20px;
+  flex-direction: column;
+}
+
+.message-list__item {
+  margin-bottom: 10px;
+}
+
+.message-list__item:last-child {
+  margin-bottom: 0;
+}
+
+.message-list__item_outgoing {
+  text-align: right;
+}
+
+.chat__form {
+  margin-top: 20px;
+}
+
+.message-form {
+  display: flex;
+}
+
+.message-form__input {
+  width: 100% !important;
+}
+
+.message-form__button {
+  margin-left: 10px;
+}
+

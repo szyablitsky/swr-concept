@@ -1,4 +1,4 @@
 {
   "name": "Settings",
-  "main": "./Resolver.tsx"
+  "main": "Resolver.tsx"
 }

@@ -8,7 +8,6 @@ const Clients = React.lazy(() => import("components/pages/Clients"));
 const Employees = React.lazy(() => import("components/pages/Employees"));
 const Settings = React.lazy(() => import("components/pages/Settings"));
 
-
 export const routeIds = keymirror({
   home: null,
   login: null,

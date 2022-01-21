@@ -1,4 +1,4 @@
-import LoadablePage from 'components/uikit/LoadablePage';
+import LoadablePage from 'components/molecules/LoadablePage';
 import { useLoadCurrentAuth } from 'hooks/api/auth';
 import Routes from 'lib/Routes';
 import React from 'react';
@@ -15,5 +15,5 @@ export default function Resolver() {
   if (user?.role === 'employee') return <LoadablePage component={EmployeeSettings} />;
   if (user?.role === 'owner') return <LoadablePage component={OwnerSettings} />;
 
-  return <Navigate to={Routes.login()} />
+  return <Navigate to={Routes.login()} />;
 }

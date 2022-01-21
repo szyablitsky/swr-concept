@@ -1,6 +1,6 @@
-import SettingsForm from 'components/pages/Settings/SettingsForm';
-import ClientLayout from "components/shared/Layout/ClientLayout";
-import Text from "components/uikit/Text";
+import ProfileForm from 'components/organisms/ProfileForm';
+import ClientLayout from "components/organisms/Layout/ClientLayout";
+import Text from "components/atoms/Text";
 import React from 'react';
 
 export default function ClientSettings() {
@@ -8,7 +8,7 @@ export default function ClientSettings() {
     <ClientLayout>
       <Text tag="h1">Settings</Text>
 
-      <SettingsForm />
+      <ProfileForm />
     </ClientLayout>
   );
 }

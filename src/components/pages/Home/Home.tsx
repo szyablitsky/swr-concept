@@ -1,5 +1,5 @@
-import Layout from "components/shared/Layout";
-import Text from "components/uikit/Text";
+import Layout from "components/organisms/Layout";
+import Text from "components/atoms/Text";
 import useCurrentAuth from 'hooks/useCurrentAuth';
 
 export default function HomePage() {

@@ -1,9 +1,10 @@
 import { ChatType } from 'types/api/chat';
+import { MessageType } from 'types/api/message';
 
 type ChatNotificationType = {
-  type: 'newMessage',
+  type: 'newMessages',
   chat: ChatType,
-  messageCount: number,
+  messages: MessageType[],
 }
 
 export type NotificationType = ChatNotificationType; // | SomethingElseNotificationType | OneMoreNotificationType

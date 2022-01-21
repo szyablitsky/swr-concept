@@ -1,14 +1,12 @@
-import LoadablePage from 'components/uikit/LoadablePage';
+import LoadablePage from 'components/molecules/LoadablePage';
 import useInitializeApp from 'hooks/useInitializeApp';
 import { Routes as RouterRoutes, Route } from "react-router-dom";
 import { IRoute, routes } from "routeConfig";
-import Loader from "components/uikit/Loader";
+import Loader from "components/atoms/Loader";
 import "global.css";
 
-
 const Page = ({ route }: { route: IRoute }) => {
-  console.log('%c[RENDER] ', 'color: darkturquoise;', route.id,)
-
+  console.log('%c[RENDER] ', 'color: darkturquoise;', route.id, 'page')
   return <LoadablePage component={route.component} />;
 }
 

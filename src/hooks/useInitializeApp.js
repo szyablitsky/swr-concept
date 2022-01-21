@@ -6,7 +6,7 @@ export default function useInitializeApp() {
   const { currentAuth } = useLoadCurrentAuth();
   const { notifications, mutate } = useLoadNotifications();
 
-  useSubscription('notificationsUpdated', mutate);
+  useSubscription('notificationsUpdated', (notifications) => mutate(notifications, false));
 
   return {
     isInitializing: !currentAuth || !notifications,

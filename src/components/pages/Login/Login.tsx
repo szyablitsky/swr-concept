@@ -1,27 +1,23 @@
-import { useLoadUsers } from 'hooks/api/users';
+import useLogin from 'hooks/useLogin';
+import { db } from 'lib/API';
 import React from "react";
-import Text from "components/uikit/Text";
-import Loader from "components/uikit/Loader";
-import API from "API";
-import { useSWRConfig } from "swr";
+import Text from "components/atoms/Text";
+import Loader from "components/atoms/Loader";
 import { useNavigate } from "react-router-dom";
 import { UserRoleType } from 'types/api/user';
 
+const { users } = db;
+
 export default function LoginPage() {
-  const { users = [], isValidating } = useLoadUsers();
   const navigate = useNavigate();
-  const { mutate } = useSWRConfig();
+  const login = useLogin();
   const [isLoginInProgress, setIsLoginInProgress] = React.useState<boolean>(false);
 
   if (isLoginInProgress) return <Loader />;
 
   const handleLogin = async (role: UserRoleType) => {
     setIsLoginInProgress(true);
-
-    const currentAuth = await API("POST", "/api/auth", { role });
-
-    await mutate("/api/auth", currentAuth, false);
-    await mutate("/api/notifications");
+    await login(role);
     navigate("/");
   };
 
@@ -33,7 +29,7 @@ export default function LoginPage() {
     <div style={{ textAlign: "center" }}>
       <Text tag="h1">Login:</Text>
 
-      {(client && employee && owner) && !isValidating ? (
+      {(client && employee && owner) && (
         <>
           <p>
             <button onClick={() => handleLogin("client")}>{client.name} [{client.role}]</button>
@@ -45,8 +41,6 @@ export default function LoginPage() {
             <button onClick={() => handleLogin("owner")}>{owner.name} [{owner.role}]</button>
           </p>
         </>
-      ) : (
-        'loading...'
       )}
     </div>
   );

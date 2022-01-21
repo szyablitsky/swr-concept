@@ -1,7 +1,7 @@
-import SettingsForm from 'components/pages/Settings/SettingsForm';
-import OwnerLayout from 'components/shared/Layout/OwnerLayout';
-import SettingsNavMenu from 'components/shared/SettingsNavMenu';
-import Text from "components/uikit/Text";
+import SettingsForm from 'components/organisms/ProfileForm';
+import OwnerLayout from 'components/organisms/Layout/OwnerLayout';
+import SettingsNavMenu from 'components/molecules/SettingsNavMenu';
+import Text from "components/atoms/Text";
 import React from 'react';
 
 export default function OwnerSettings() {

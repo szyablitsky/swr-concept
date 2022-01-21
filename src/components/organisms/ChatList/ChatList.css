@@ -1,0 +1,12 @@
+.chat-list__item {
+  padding: 14px 20px;
+  margin-bottom: 30px;
+  width: 100%;
+  font-size: 16px;
+  display: block;
+  text-align: left;
+}
+
+.chat-list__item_active {
+  outline: 2px solid #1776d1;
+}

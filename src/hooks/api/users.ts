@@ -1,7 +1,6 @@
 import qs from 'query-string';
 import useSWR, { KeyedMutator } from "swr";
 import { UserRoleType, UserType, UserIncludesType } from 'types/api/user';
-import API from "API";
 
 type UseLoadUsers = <K extends keyof UserIncludesType | never = never>(params?: {
   q?: string,
@@ -14,10 +13,7 @@ type UseLoadUsers = <K extends keyof UserIncludesType | never = never>(params?: 
 }
 
 export const useLoadUsers: UseLoadUsers = (params) => {
-  const { data, isValidating, mutate } = useSWR(
-    `/api/users?${qs.stringify(params || {})}`,
-    (url: string) => API("GET", url),
-  );
+  const { data, isValidating, mutate } = useSWR(`/api/users?${qs.stringify(params || {})}`);
 
   return {
     mutate,

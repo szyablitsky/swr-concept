@@ -1,6 +1,6 @@
-import SettingsForm from 'components/pages/Settings/SettingsForm';
-import EmployeeLayout from 'components/shared/Layout/EmployeeLayout';
-import Text from "components/uikit/Text";
+import ProfileForm from 'components/organisms/ProfileForm';
+import EmployeeLayout from 'components/organisms/Layout/EmployeeLayout';
+import Text from "components/atoms/Text";
 import React from 'react';
 
 export default function EmployeeSettings() {
@@ -8,7 +8,7 @@ export default function EmployeeSettings() {
     <EmployeeLayout>
       <Text tag="h1">Settings</Text>
 
-      <SettingsForm />
+      <ProfileForm />
     </EmployeeLayout>
   );
 }

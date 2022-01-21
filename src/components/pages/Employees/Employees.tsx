@@ -1,6 +1,6 @@
-import Layout from "components/shared/Layout";
-import SettingsNavMenu from 'components/shared/SettingsNavMenu';
-import Text from "components/uikit/Text";
+import Layout from "components/organisms/Layout";
+import SettingsNavMenu from 'components/molecules/SettingsNavMenu';
+import Text from "components/atoms/Text";
 import { useLoadUsers } from "hooks/api/users";
 import React from 'react';
 
