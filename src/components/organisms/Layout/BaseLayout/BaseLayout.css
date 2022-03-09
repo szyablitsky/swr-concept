@@ -5,14 +5,13 @@
 
 .base-layout__sidebar {
     background-color: #1976d2;
-    padding: 20px 40px;
+    padding: 40px;
     height: 100vh;
     box-sizing: border-box;
     width: 300px;
     color: #fff;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     position: sticky;
     top: 0;
 }
@@ -22,6 +21,19 @@
     margin-bottom: 10px;
     display: inline-block;
     color: #fff;
+}
+
+.base-layout__sidebar-logo {
+    margin-bottom: 10px;
+}
+
+.base-layout__sidebar-logo__title {
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+.base-layout__sidebar-footer {
+    margin-top: auto;
 }
 
 .base-layout__sidebar span.text {
